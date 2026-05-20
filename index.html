@@ -490,26 +490,20 @@
 
   <script>
     function handleSubmit() {
-      const name  = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const type  = document.getElementById('type').value;
+  const name  = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const type  = document.getElementById('type').value;
 
-      if (!name) { alert('Please enter your name.'); return; }
-      if (!email || !email.includes('@')) { alert('Please enter a valid email address.'); return; }
-      if (!type) { alert('Please let us know who you are.'); return; }
+  if (!name) { alert('Please enter your name.'); return; }
+  if (!email || !email.includes('@')) { alert('Please enter a valid email address.'); return; }
+  if (!type) { alert('Please let us know who you are.'); return; }
 
-      // TO CONNECT YOUR FORM: replace the console.log below with your
-      // Formspree endpoint, Mailchimp signup URL, or Airtable API call.
-      // Example with Formspree:
-      fetch('https://formspree.io/f/xeederzr', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, email, type })
-      });
+  fetch('https://formspree.io/f/xeederzr', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ name, email, type })
+  });
 
-      document.getElementById('form-content').style.display = 'none';
-      document.getElementById('success-msg').style.display = 'block';
-    }
-  </script>
-</body>
-</html>
+  document.getElementById('form-content').style.display = 'none';
+  document.getElementById('success-msg').style.display = 'block';
+}
