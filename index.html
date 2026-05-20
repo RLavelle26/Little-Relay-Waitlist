@@ -498,19 +498,14 @@
       if (!email || !email.includes('@')) { alert('Please enter a valid email address.'); return; }
       if (!type) { alert('Please let us know who you are.'); return; }
 
-      // TO CONNECT YOUR FORM: replace the console.log below with your
-      // Formspree endpoint, Mailchimp signup URL, or Airtable API call.
-      // Example with Formspree:
-      //   fetch('https://formspree.io/f/xeederzr', {
-      //     method: 'POST',
-      //     headers: { 'Content-Type': 'application/json' },
-      //     body: JSON.stringify({ name, email, type })
-      //   });
-      fetch('https://formspree.io/f/YOUR_ID', {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({ name, email, type })
-});
+      TO CONNECT YOUR FORM: replace the console.log below with your
+      Formspree endpoint, Mailchimp signup URL, or Airtable API call.
+      Example with Formspree:
+      fetch('https://formspree.io/f/xeederzr', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email, type })
+      });
 
       document.getElementById('form-content').style.display = 'none';
       document.getElementById('success-msg').style.display = 'block';
